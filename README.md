@@ -11,7 +11,7 @@
 
 ### APK
 
-[方格v1.0.apk](/app/build/outputs/apk/debug/方格v1.0.apk)
+[方格v1.0.apk](/assets/方格v1.0.apk)
 
 ### 应用截图
 
