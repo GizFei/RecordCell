@@ -1,0 +1,101 @@
+<resources>
+    <string name="app_name">Record</string>
+    <string name="img_desc">An Image</string>
+
+<!--    登录活动相关字符串-->
+    <string name="login_username_or_email_hint">Username</string>
+    <string name="login_password_hint">Enter password</string>
+    <string name="login_btn_text">Login</string>
+    <string name="login_wrong_string_hint">Username or password should not be empty</string>
+    <string name="register_btn_text">Sign Up</string>
+<!--    注册活动相关字符串-->
+    <string name="register_username_hint">Enter username</string>
+    <string name="register_email_hint">Enter email</string>
+    <string name="register_password_hint">Enter password</string>
+    <string name="register_confirm_password_hint">Enter password again</string>
+    <string name="register_create_account_text">Create account</string>
+<!--    其他字符-->
+    <string name="wrong_username_hint">Username contains @/</string>
+    <string name="wrong_email_hint">Wrong email</string>
+    <string name="wrong_password_hint">Two passwords aren\'t the same. Length should > 8. Should no blanks.</string>
+    <string name="no_permission_text">Request needed permissions</string>
+    <string name="change_header_bg_btn_tooltip">Change header bg image</string>
+    <string name="profile_text">Profile</string>
+<!--    共享元素动画字符串-->
+    <string name="share_register_btn" translatable="false">ShareRegister</string>
+    <string name="share_username_et" translatable="false">ShareUsernameEt</string>
+    <string name="share_password_et" translatable="false">SharePassword</string>
+    <string name="share_app_logo" translatable="false">ShareLogo</string>
+
+    <string name="new_todo_activity_name">编辑待办</string>
+    <string name="new_todo_activity_see_name">查看待办</string>
+    <string name="new_todo_thing_hint">待办事项</string>
+    <string name="new_todo_remark">备注</string>
+    <string name="new_todo_taskbox_default">无</string>
+    <string name="new_todo_save_btn_text">保存</string>
+    <string name="new_todo_no_remind_time_text">不提醒</string>
+
+    <string name="new_taskbox_title">新建任务集</string>
+
+    <string name="bmob_delete_success_text" translatable="false">删除成功</string>
+    <string name="bmob_delete_failure_text" translatable="false">删除失败</string>
+    <string name="bmob_save_success_text" translatable="false">保存成功</string>
+    <string name="bmob_save_failure_text" translatable="false">保存失败</string>
+    <string name="bmob_update_success_text" translatable="false">更新成功</string>
+    <string name="bmob_update_failure_text" translatable="false">更新失败</string>
+
+    <string name="tool_short_text" translatable="false">时钟滴答敲过零点，除夕到了。眼前，打一句“除夕快乐”，饱含着祝福的话语从指尖流泻，穿透屏幕，往彼岸飞去。你和谁互道“快乐”呢？那一定是你在意也在意你的人儿吧。</string>
+    <string name="tool_long_text" translatable="false">时钟滴答敲过零点，除夕到了。眼前，打一句“除夕快乐”，饱含着祝福的话语从指尖流泻，穿透屏幕，往彼岸飞去。你和谁互道“快乐”呢？那一定是你在意也在意你的人儿吧。
+        时钟滴答敲过零点，除夕到了。窗外，远处，响起熟悉的鞭炮声，此起彼伏。“爆竹声中一岁除”。不管你愿不愿意，这一岁已转身离去，不会回头。
+        时钟滴答敲过零点，除夕到了。门外，铁灶，把把贡银堆起旺火。撕下的旧楹联、旧年的旧物也被扔进火堆中，付诸一炬。过去的事物，在火的碎星里，慢慢地黯淡，消失。过去的事物，在火的碎星里，慢慢地黯淡，消失。</string>
+
+    <string name="menu_item_delete">删除</string>
+    <string name="menu_item_modify">修改</string>
+    <string name="menu_todo_add_to_taskbox">加入任务集</string>
+
+    <string name="new_taskbox_title_hint">名称</string>
+    <string name="new_taskbox_intro_hint">简介</string>
+
+    <string name="todo_remind_title">待办提醒</string>
+    <string name="todo_remind_know_text">知道了</string>
+    <string name="todo_remind_finish_text">完成</string>
+    <string name="new_taskbox_select_bg_text">选择背景图：</string>
+
+    <string name="taskbox_detail_todo_hint">待办事项</string>
+
+    <string name="select_todo_dialog_title_add">添加待办事项</string>
+    <string name="select_todo_dialog_title_remove">移除待办事项</string>
+
+<!--    富文本编辑器操作菜单-->
+    <string name="editor_item_fontStyle">文字风格</string>
+    <string name="editor_item_paraStyle">段落格式</string>
+    <string name="editor_item_textStyle">文本格式</string>
+    <string name="editor_item_edit">编辑</string>
+    <string name="editor_item_richText">富文本</string>
+
+    <string name="new_note_activity_edit_title">编辑便签</string>
+    <string name="new_note_activity_see_title">查看便签</string>
+    <string name="new_note_text_counter" translatable="false">%1$d字</string>
+    <string name="select_note_dialog_title_add">添加便签</string>
+    <string name="select_note_dialog_title_remove">移除便签</string>
+    <string name="dialog_note_history_title">便签历史</string>
+    <string name="menu_new_note_share_text">分享</string>
+    <string name="menu_new_note_history_text">查看历史</string>
+
+    <string name="new_daily_activity_name">编辑日常</string>
+    <string name="new_daily_activity_name_see" translatable="false">查看日常</string>
+    <string name="new_daily_thing_hint">日常事项</string>
+    <string name="new_daily_remark_hint">描述</string>
+    <string name="new_daily_no_time_text">无</string>
+    <string name="new_daily_no_end_time_text">长期</string>
+    <string name="new_daily_repeat_everyday_text">每天</string>
+    <string name="dialog_select_repeat_time_title">设置重复间隔</string>
+    <string name="new_daily_repeat_week_text">每周</string>
+    <string name="new_daily_repeat_month_text">每月</string>
+    <string name="daily_finish_case_title">打卡心得</string>
+    <string name="all_all_function_text">所有功能</string>
+    <string name="collecting_text">Collecting to FunBox app…</string>
+    <string name="person_setting_hint">设置</string>
+    <string name="dialog_function_list_order_title">主页功能排序</string>
+
+</resources>

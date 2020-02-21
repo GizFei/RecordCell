@@ -1,0 +1,76 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:textCursorDrawable">@drawable/edittext_cursor</item>
+    </style>
+
+    <style name="AppTheme.UpToStatusBar">
+        <!--        使布局顶到状态栏 -->
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <!--        <item name="android:statusBarColor">@color/transparent</item>-->
+    </style>
+
+    <style name="AppTheme.LightStatusBar">
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor">@color/white</item>
+    </style>
+
+    <!-- 透明的Activity样式 -->
+    <style name="AppTheme.Transparent" parent="AppTheme">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor">@color/white</item>
+    </style>
+
+    <!--圆角BottomSheet styles.xml文件-->
+    <style name="BottomSheet" parent="Widget.Design.BottomSheet.Modal">
+        <!--背景，顶部两个圆角-->
+        <item name="android:background">@drawable/bg_bottom_sheet</item>
+    </style>
+    <style name="BottomSheetDialog" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <!--底部弹出条的样式（相当于背景）-->
+        <item name="bottomSheetStyle">@style/BottomSheet</item>
+        <!--状态栏颜色-->
+        <item name="android:statusBarColor">@color/transparent</item>
+        <!--导航条颜色-->
+        <item name="android:navigationBarColor">@color/white</item>
+        <!-- 背景遮罩的透明度 -->
+        <item name="android:backgroundDimAmount">0.32</item>
+<!--        <item name="android:windowSoftInputMode">stateVisible|adjustResize</item>-->
+        <item name="android:textCursorDrawable">@drawable/edittext_cursor</item>
+    </style>
+    <style name="BottomSheetDialog.ShowSoftInput">
+        <!-- 如果弹出软键盘，则整个BottomSheet向上平移，使软键盘在下方 -->
+        <item name="android:windowSoftInputMode">stateVisible|adjustResize</item>
+    </style>
+
+    <!-- 自定义Dialog -->
+    <style name="CustomDialog" parent="Theme.MaterialComponents.Light.Dialog">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@drawable/bg_custom_dialog</item>
+        <item name="android:backgroundDimAmount">0.32</item>
+        <item name="android:windowElevation">8dp</item>
+        <item name="android:windowSoftInputMode">stateVisible</item>
+    </style>
+
+<!--    自定义TextInputLayout-->
+    <style name="CustomTextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxCornerRadiusTopStart">@dimen/custom_text_input_radius</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/custom_text_input_radius</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/custom_text_input_radius</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/custom_text_input_radius</item>
+    </style>
+
+</resources>

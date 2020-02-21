@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F8F8F8">
+
+    <TextView
+        android:id="@+id/daily_in_calendar_date_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16sp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="6dp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        tools:text="2020年2月"
+        />
+
+    <com.haibin.calendarview.CalendarLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#F8F8F8"
+        app:default_status="expand"
+        app:calendar_show_mode="both_month_week_view"
+        app:calendar_content_view_id="@id/recyclerView">
+
+        <com.haibin.calendarview.CalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F8F8F8"
+            app:month_view="com.giz.recordcell.widgets.DailyInCalendarMonthView"
+            app:week_view="com.giz.recordcell.widgets.DailyInCalendarWeekView"
+            app:calendar_height="80dp"
+            app:min_year="2004"
+            app:week_start_with="sun"
+            app:week_background="#F8F8F8"
+            app:month_view_show_mode="mode_fix"
+            app:week_text_color="#111" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="42dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="8dp"
+            android:background="@drawable/bg_calendar_rv"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+    </com.haibin.calendarview.CalendarLayout>
+
+</LinearLayout>

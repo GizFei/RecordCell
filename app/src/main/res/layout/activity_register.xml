@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/register_back_btn"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:contentDescription="@string/img_desc"
+            android:src="@drawable/ic_arrow_back"
+            android:tint="@color/black"
+            android:scaleType="center"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            />
+
+        <ImageView
+            android:id="@+id/register_app_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="64dp"
+            android:contentDescription="@string/img_desc"
+            android:src="@drawable/app_banner"
+            android:layout_marginTop="8dp"
+            android:transitionName="@string/share_app_logo"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register_create_account_text"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"
+            />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:id="@+id/register_username_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="36dp"
+            app:endIconMode="clear_text"
+            app:hintEnabled="false"
+            app:errorEnabled="true"
+            app:errorTextColor="@color/red"
+            app:errorIconTint="@color/red">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/register_username_et"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:paddingEnd="64dp"
+                android:paddingStart="16dp"
+                android:background="@drawable/bg_edittext_round_corner"
+                android:drawableStart="@drawable/ic_person"
+                android:drawableTint="@color/edittext_start_icon_tint"
+                android:drawablePadding="8dp"
+                android:inputType="text"
+                android:hint="@string/register_username_hint"
+                android:textCursorDrawable="@drawable/edittext_cursor"
+                android:maxLength="18"
+                android:transitionName="@string/share_username_et"
+                tools:text="dkfj;sdlkajfldkjfalkdldsfajslkdfjalkdsjfalkdjfldslsdkfj"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:id="@+id/register_email_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            app:endIconMode="clear_text"
+            app:hintEnabled="false"
+            app:errorEnabled="true"
+            app:errorTextColor="@color/red"
+            app:errorIconTint="@color/red">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/register_email_et"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_edittext_round_corner"
+                android:drawableStart="@drawable/ic_email"
+                android:drawablePadding="8dp"
+                android:drawableTint="@color/edittext_start_icon_tint"
+                android:hint="@string/register_email_hint"
+                android:paddingStart="16dp"
+                android:paddingEnd="64dp"
+                android:inputType="textWebEmailAddress"
+                android:textCursorDrawable="@drawable/edittext_cursor" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginTop="8dp"
+            app:hintEnabled="false">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/register_password_et"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="24dp"
+                android:paddingEnd="24dp"
+                android:paddingStart="16dp"
+                android:background="@drawable/bg_edittext_round_corner"
+                android:drawableStart="@drawable/ic_lock"
+                android:drawableTint="@color/edittext_start_icon_tint"
+                android:drawablePadding="8dp"
+                android:hint="@string/register_password_hint"
+                android:inputType="textPassword"
+                android:maxLength="16"
+                android:textCursorDrawable="@drawable/edittext_cursor"
+                android:transitionName="@string/share_password_et"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:id="@+id/register_confirm_psd_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginTop="24dp"
+            app:hintEnabled="false"
+            app:errorEnabled="true"
+            app:errorTextColor="@color/red"
+            app:errorIconTint="@color/red">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/register_confirm_psd_et"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="24dp"
+                android:paddingEnd="24dp"
+                android:paddingStart="16dp"
+                android:background="@drawable/bg_edittext_round_corner"
+                android:drawableStart="@drawable/ic_lock"
+                android:drawableTint="@color/edittext_start_icon_tint"
+                android:drawablePadding="8dp"
+                android:hint="@string/register_confirm_password_hint"
+                android:inputType="textPassword"
+                android:maxLength="16"
+                android:textCursorDrawable="@drawable/edittext_cursor"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <FrameLayout
+            android:id="@+id/register_register_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginTop="32dp"
+            android:transitionName="@string/share_register_btn">
+
+            <com.giz.recordcell.widgets.ShadeView
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                app:cornerRadius="12dp"
+                app:solidColor="@color/colorAccent"
+                app:shadeColor="@color/translucentColorAccent"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/register_btn_text"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</ScrollView>

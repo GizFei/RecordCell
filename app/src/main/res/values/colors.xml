@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#37CEFF</color>
+    <color name="colorPrimaryDark">#0E9DC9</color>
+    <color name="colorAccent">#4145EB</color>
+
+    <color name="translucentColorAccent">#A34145EB</color>
+    <color name="translucentLightColorAccent">#524145EB</color>
+<!--    <color name="colorAccent">#37CEFF</color>-->
+<!--    <color name="translucentColorAccent">#A337CEFF</color>-->
+    <color name="secondaryColorAccent">#37CEFF</color>
+    <color name="secondaryLightColorAccent">#8FE0FC</color>
+
+    <color name="ripple_color">#EEE</color>
+    <color name="main_bottom_bar_button">#9AABC9</color>
+    <color name="main_bottom_bar_button_dark">#7B8FB1</color>
+    <color name="main_bottom_bar_add_button">#00DFB9</color>
+    <color name="main_bottom_bar_add_button_dark">#06BE9D</color>
+    <color name="edittext_start_icon_tint">#5F5F5F</color>
+
+    <color name="white">#FFF</color>
+    <color name="black">#000</color>
+    <color name="gray">#CCC</color>
+    <color name="red">#FF3737</color>
+    <color name="light_gray">#EEE</color>
+    <color name="dark_gray">#8B8B8B</color>
+    <color name="transparent">#00FFFFFF</color>
+
+<!--    #4145EB-->
+
+</resources>

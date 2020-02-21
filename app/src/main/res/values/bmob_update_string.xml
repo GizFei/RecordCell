@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="BMBreak_Network" translatable="false">未联网</string>
+	<string name="BMUpdateTitle" translatable="false">发现新版本</string>
+	<string name="BMNewVersion" translatable="false">最新版本: </string>
+	<string name="BMUpdateContent" translatable="false">更新内容</string>
+	<string name="BMUpdateSize" translatable="false">仅需要下载:</string>
+	<string name="BMTargetSize" translatable="false">新版本大小:</string>
+	<string name="BMGprsCondition" translatable="false">（提示：非WIFI环境）</string>
+	<string name="BMUpdateNow" translatable="false">立即更新</string>
+	<string name="BMAppUpdate" translatable="false">应用更新</string>
+	<string name="BMNotNow" translatable="false">以后再说</string>
+	<string name="BMIgnore" translatable="false">忽略该版</string>
+	<string name="BMToast_IsUpdating" translatable="false">正在更新中....</string>
+	<string name="BMDialog_InstallAPK" translatable="false">最新版本已下载，是否安装？</string>
+	
+	<string name="BMUpdateCheck" translatable="false">v3.1.4Beta</string>
+</resources>

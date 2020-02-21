@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:aapt="http://schemas.android.com/aapt" xmlns:android="http://schemas.android.com/apk/res/android">
+    <aapt:attr name="android:drawable">
+        <vector android:name="vector" android:viewportHeight="24" android:viewportWidth="24" android:height="24dp" android:width="24dp">
+            <group android:name="group" android:pivotY="12" android:pivotX="12">
+                <path android:name="path" android:fillColor="#ffffff" android:pathData="M 13 2.05 L 13 5.08 C 16.39 5.57 19 8.47 19 12 C 19 12.9 18.82 13.75 18.52 14.54 L 21.12 16.07 C 21.68 14.83 22 13.45 22 12 C 22 6.82 18.05 2.55 13 2.05 Z M 12 19 C 8.13 19 5 15.87 5 12 C 5 8.47 7.61 5.57 11 5.08 L 11 2.05 C 5.94 2.55 2 6.81 2 12 C 2 17.52 6.47 22 11.99 22 C 15.3 22 18.23 20.39 20.05 17.91 L 17.45 16.38 C 16.17 17.98 14.21 19 12 19 Z"/>
+            </group>
+        </vector>
+    </aapt:attr>
+    <target android:name="group">
+        <aapt:attr name="android:animation">
+            <objectAnimator android:interpolator="@android:interpolator/fast_out_slow_in" android:valueType="floatType" android:valueTo="360" android:valueFrom="0" android:duration="400" android:propertyName="rotation"/>
+        </aapt:attr>
+    </target>
+    <target android:name="path">
+        <aapt:attr name="android:animation">
+            <objectAnimator android:interpolator="@android:interpolator/fast_out_slow_in" android:valueType="pathType" android:valueTo="M 9 16.17 L 4.83 12 C 4.357 12.47 3.883 12.94 3.41 13.41 C 5.273 15.273 7.137 17.137 9 19 L 15 13 C 17 11 19 9 21 7 C 20.53 6.53 20.06 6.06 19.59 5.59 Z M 13.845 19.536 L 13.845 19.536 C 13.845 19.536 13.845 19.536 13.845 19.536 L 13.845 19.536 C 13.845 19.536 13.845 19.536 13.845 19.536 C 13.845 19.536 13.845 19.536 13.845 19.536 C 13.845 19.536 13.845 19.536 13.845 19.536 L 13.845 19.536 C 13.845 19.536 13.845 19.536 13.845 19.536 C 13.845 19.536 13.845 19.536 13.845 19.536" android:valueFrom="M 13 2.05 L 13 5.08 C 16.39 5.57 19 8.47 19 12 C 19 12.9 18.82 13.75 18.52 14.54 L 21.12 16.07 C 21.68 14.83 22 13.45 22 12 C 22 6.82 18.05 2.55 13 2.05 Z M 12 19 L 12 19 C 14.21 19 16.17 17.98 17.45 16.38 L 20.05 17.91 C 18.23 20.39 15.3 22 11.99 22 C 6.47 22 2 17.52 2 12 C 2 6.81 5.94 2.55 11 2.05 L 11 5.08 C 7.61 5.57 5 8.47 5 12 C 5 15.87 8.13 19 12 19" android:duration="400" android:propertyName="pathData"/>
+        </aapt:attr>
+    </target>
+</animated-vector>

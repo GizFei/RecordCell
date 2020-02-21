@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/login_app_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="84dp"
+        android:contentDescription="@string/img_desc"
+        android:src="@drawable/app_banner"
+        android:layout_marginTop="64dp"
+        android:transitionName="@string/share_app_logo"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="56dp"
+        app:hintEnabled="false"
+        app:endIconMode="clear_text">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/login_username_et"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:inputType="text"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:drawableStart="@drawable/ic_person"
+            android:drawableTint="@color/edittext_start_icon_tint"
+            android:drawablePadding="8dp"
+            android:background="@drawable/bg_edittext_round_corner"
+            android:textCursorDrawable="@drawable/edittext_cursor"
+            android:transitionName="@string/share_username_et"
+            android:hint="@string/login_username_or_email_hint"
+            tools:text="用户名"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="16dp"
+        app:hintEnabled="false"
+        app:endIconMode="password_toggle">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/login_password_et"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:paddingEnd="16dp"
+            android:paddingStart="16dp"
+            android:background="@drawable/bg_edittext_round_corner"
+            android:drawableStart="@drawable/ic_lock"
+            android:drawableTint="@color/edittext_start_icon_tint"
+            android:drawablePadding="8dp"
+            android:hint="@string/login_password_hint"
+            android:inputType="textPassword"
+            android:textCursorDrawable="@drawable/edittext_cursor"
+            android:transitionName="@string/share_password_et"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <FrameLayout
+        android:id="@+id/login_login_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="44dp"
+        android:transitionName="@string/share_register_btn">
+
+        <com.giz.recordcell.widgets.ShadeView
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            app:cornerRadius="12dp"
+            app:solidColor="@color/colorAccent"
+            app:shadeColor="@color/translucentColorAccent"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/login_btn_text"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/login_register_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="12dp">
+
+        <com.giz.recordcell.widgets.ShadeView
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            app:cornerRadius="12dp"
+            app:solidColor="@color/white"
+            app:shadeColor="#EEE"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/register_btn_text"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+    </FrameLayout>
+
+</LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+    <!--    <FrameLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginEnd="32dp"-->
+    <!--        android:layout_marginStart="32dp"-->
+    <!--        android:layout_marginTop="56dp">-->
+
+    <!--        <com.google.android.material.textfield.TextInputLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            app:hintEnabled="false"-->
+    <!--            app:boxStrokeColor="@color/black">-->
+
+    <!--            <com.google.android.material.textfield.TextInputEditText-->
+    <!--                android:id="@+id/login_username_et"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="48dp"-->
+    <!--                android:paddingEnd="64dp"-->
+    <!--                android:paddingStart="16dp"-->
+    <!--                android:background="@drawable/bg_edittext_round_corner"-->
+    <!--                android:drawableStart="@drawable/ic_person"-->
+    <!--                android:drawableTint="#BBB"-->
+    <!--                android:drawablePadding="8dp"-->
+    <!--                android:inputType="text"-->
+    <!--                android:textCursorDrawable="@drawable/edittext_cursor"-->
+    <!--                android:hint="@string/login_username_or_email_hint"-->
+    <!--                android:transitionName="@string/share_username_et"-->
+    <!--                />-->
+
+    <!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+    <!--        <ImageView-->
+    <!--            android:id="@+id/login_username_clear_btn"-->
+    <!--            android:layout_width="56dp"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:src="@drawable/ic_cancel"-->
+    <!--            android:tint="#6E6E6E"-->
+    <!--            android:scaleType="center"-->
+    <!--            android:background="?attr/selectableItemBackgroundBorderless"-->
+    <!--            android:layout_gravity="end|center_vertical"-->
+    <!--            android:contentDescription="@string/img_desc"-->
+    <!--            android:visibility="gone"-->
+    <!--            tools:visibility="visible"-->
+    <!--            />-->
+
+    <!--    </FrameLayout>-->

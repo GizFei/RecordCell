@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_margin="8dp">
+
+    <ImageView
+        android:id="@+id/floating_editor_open_btn"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="8dp"
+        android:layout_gravity="top"
+        android:src="@drawable/ic_add"
+        android:tint="@color/black"
+        android:scaleType="center"
+        android:background="@drawable/bg_round_corner"
+        android:backgroundTint="@color/white"
+        android:contentDescription="@string/img_desc"
+        android:elevation="8dp"
+        android:rotation="45"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/floating_editor_editor_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:visibility="visible"
+        tools:visibility="visible"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="16dp"
+        >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="240dp"
+            android:layout_height="300dp"
+            >
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/floating_editor_save_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:text="@string/new_todo_save_btn_text"
+                    android:textColor="@color/colorAccent"
+                    android:background="@drawable/bg_ripple_effect"
+                    android:layout_gravity="start|center_vertical"
+                    />
+
+                <ImageView
+                    android:id="@+id/floating_editor_close_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:src="@drawable/ic_close"
+                    android:tint="@color/black"
+                    android:contentDescription="@string/img_desc"
+                    android:layout_gravity="end|center_vertical"
+                    />
+
+            </FrameLayout>
+
+            <EditText
+                android:id="@+id/floating_editor_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="8dp"
+                android:background="@null"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:gravity="top"
+                tools:text="@string/tool_short_text"
+                />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

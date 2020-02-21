@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:id="@+id/daily_item_cv"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    app:cardElevation="0dp"
+    app:cardCornerRadius="12dp"
+    app:cardBackgroundColor="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        android:layout_margin="8dp">
+
+        <TextView
+            android:id="@+id/daily_item_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:ellipsize="end"
+            tools:text="日常事项"
+            />
+
+        <com.giz.recordcell.widgets.ShadeImageButton
+            android:id="@+id/daily_item_finish_btn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_check_single"
+            android:scaleType="center"
+            app:sib_solidColor="@color/colorPrimary"
+            app:sib_type="circle"
+            app:sib_shadeColor="@color/secondaryLightColorAccent"
+            />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

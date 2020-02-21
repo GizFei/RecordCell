@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    字号-->
+    <string-array name="fontSize">
+        <item>微小</item>
+        <item>小号</item>
+        <item>正常</item>
+        <item>中等</item>
+        <item>大号</item>
+        <item>特大</item>
+        <item>最大</item>
+    </string-array>
+<!--    标题-->
+    <string-array name="heading">
+        <item>普通段落</item>
+        <item>一级标题</item>
+        <item>二级标题</item>
+        <item>三级标题</item>
+        <item>四级标题</item>
+        <item>五级标题</item>
+    </string-array>
+</resources>

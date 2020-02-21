@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:clickable="true"
+    android:focusable="true">
+
+    <com.giz.recordcell.widgets.ShadeImageButton
+        android:id="@+id/item_function_icon"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:src="@drawable/ic_notebook"
+        android:contentDescription="@string/img_desc"
+        android:scaleType="center"
+        app:sib_solidColor="#26c6da"
+        app:sib_type="corner"
+        app:sib_radius="16dp"
+        app:sib_shadeColor="#5C26C6DA"
+        app:sib_yOffset="4dp"
+        />
+
+    <TextView
+        android:id="@+id/item_function_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:layout_gravity="center_horizontal|bottom"
+        tools:text="便签"
+        />
+
+<!--    <com.giz.recorddemo.widgets.ShadeView-->
+<!--        android:id="@+id/item_function_shade_view"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="120dp"-->
+<!--        app:shadeColor="#80FF0000"-->
+<!--        app:solidColor="#F00"-->
+<!--        />-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/item_function_icon"-->
+<!--        android:layout_width="48dp"-->
+<!--        android:layout_height="48dp"-->
+<!--        android:contentDescription="@string/img_desc"-->
+<!--        android:src="@drawable/ic_robot"-->
+<!--        android:layout_gravity="center_vertical"-->
+<!--        android:layout_marginStart="36dp"-->
+<!--        />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/item_function_text"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:textSize="32sp"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:layout_gravity="end|center_vertical"-->
+<!--        android:layout_marginEnd="36dp"-->
+<!--        tools:text="记    录"-->
+<!--        />-->
+
+</FrameLayout>

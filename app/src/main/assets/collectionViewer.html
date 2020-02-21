@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>收藏文章查看器</title>
+    <meta charset="UTF-8">
+    <script type="text/javascript">
+        var mdDoc;
+
+        function initDoc() { // 初始化文档
+            mdDoc = document.getElementById("textBox");
+        }
+
+        function setContent(content) {
+            mdDoc.innerHTML = content;
+            let imgs = Array.from(document.getElementsByTagName("img"))
+            for (i in imgs) {
+                imgs[i].onclick = function() {
+                    AndroidJs.imgClick(this.src)
+                }
+            }
+        }
+
+    </script>
+    <style type="text/css">
+        body {
+            height: 100%;
+            margin: 16px;
+            background-color: #fff;
+        }
+
+        #textBox {
+            width: 100%;
+            overflow-y: scroll;
+            caret-color: #4145EB; // 插入符号（|）的颜色
+        }
+
+    </style>
+    <link rel="stylesheet" href="theme.css">
+</head>
+
+<body onload="initDoc();">
+    <div id="textBox"></div>
+</body>
+
+</html>

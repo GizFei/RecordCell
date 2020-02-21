@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="ShadeView">
+        <attr name="shadeColor" format="color" />
+        <attr name="solidColor" format="color" />
+        <attr name="shadeLength" format="dimension" />
+        <attr name="cornerRadius" format="dimension" />
+        <attr name="yOffset" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="RoundedImageView">
+        <attr name="riv_type" format="enum">
+            <enum name="circle" value="1" />
+            <enum name="corner" value="2" />
+        </attr>
+        <attr name="riv_radius" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="ShadeImageButton">
+        <attr name="sib_type" format="enum">
+            <enum name="circle" value="1" />
+            <enum name="corner" value="2" />
+        </attr>
+        <attr name="sib_radius" format="dimension" />
+        <attr name="sib_shadeColor" format="color" />
+        <attr name="sib_solidColor" format="color" />
+        <attr name="sib_shadeLength" format="dimension" />
+        <attr name="sib_yOffset" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="ShadeTextView">
+        <attr name="stv_radius" format="dimension" />
+        <attr name="stv_shadeColor" format="color" />
+        <attr name="stv_solidColor" format="color" />
+        <attr name="stv_shadeLength" format="dimension" />
+        <attr name="stv_yOffset" format="dimension" />
+        <attr name="fullRoundCorner" format="boolean" /> <!-- 圆角是否完全 -->
+    </declare-styleable>
+
+    <declare-styleable name="BottomArcImageView">
+        <attr name="arcPercent" format="integer" />
+        <attr name="arcShadeLength" format="dimension" />
+        <attr name="arcShadeColor" format="color" />
+    </declare-styleable>
+
+</resources>

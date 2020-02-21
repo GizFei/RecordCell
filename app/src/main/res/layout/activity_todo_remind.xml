@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3D000000"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@drawable/bg_todo_remind">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:textColor="@color/black"
+            android:text="@string/todo_remind_title"
+            />
+
+        <TextView
+            android:id="@+id/todo_remind_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            tools:text="待办事项"
+            />
+
+        <TextView
+            android:id="@+id/todo_remind_remark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:lineSpacingExtra="2dp"
+            android:textColor="@color/dark_gray"
+            android:maxLines="8"
+            android:ellipsize="end"
+            tools:text="@string/tool_short_text"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <com.giz.recordcell.widgets.ShadeTextView
+                android:id="@+id/todo_remind_know_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:gravity="center"
+                android:layout_gravity="start|center_vertical"
+                android:text="@string/todo_remind_know_text"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                app:stv_shadeLength="10dp"
+                app:stv_shadeColor="#EEE"
+                app:stv_radius="10dp"
+                app:stv_solidColor="@color/white"
+                app:stv_yOffset="2dp"
+                />
+
+            <com.giz.recordcell.widgets.ShadeTextView
+                android:id="@+id/todo_remind_finish_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:gravity="center"
+                android:layout_gravity="start|center_vertical"
+                android:text="@string/todo_remind_finish_text"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                app:stv_shadeLength="10dp"
+                app:stv_shadeColor="@color/secondaryLightColorAccent"
+                app:stv_radius="10dp"
+                app:stv_solidColor="@color/secondaryColorAccent"
+                app:stv_yOffset="2dp"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

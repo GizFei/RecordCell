@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/editor_actions_tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="@color/black"
+        app:tabIndicatorColor="@color/black"
+        app:tabIndicatorFullWidth="false"
+        app:tabRippleColor="@color/ripple_color"
+        >
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/editor_item_textStyle"
+            />
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/editor_item_paraStyle"
+            />
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/editor_item_edit"
+            />
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/editor_item_richText"
+            />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/editor_horizontal_sv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:scrollbars="none"
+        android:visibility="gone">
+
+        <FrameLayout
+            android:id="@+id/editor_actions_rootContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <!--文本格式-->
+            <LinearLayout
+                android:id="@+id/editor_textStyle_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:visibility="visible">
+
+                <Spinner
+                    android:id="@+id/editor_fontSize_spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/fontSize"
+                    android:dropDownWidth="80dp"
+                    android:dropDownSelector="#CCC"
+                    />
+
+            </LinearLayout>
+            <!--段落格式-->
+            <LinearLayout
+                android:id="@+id/editor_paraStyle_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:visibility="invisible">
+
+                <Spinner
+                    android:id="@+id/editor_heading_spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/heading"
+                    android:dropDownWidth="100dp"
+                    />
+
+            </LinearLayout>
+            <!--编辑-->
+            <LinearLayout
+                android:id="@+id/editor_edit_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:visibility="invisible">
+
+            </LinearLayout>
+            <!--富文本-->
+            <LinearLayout
+                android:id="@+id/editor_richText_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:visibility="invisible">
+
+            </LinearLayout>
+        </FrameLayout>
+
+    </HorizontalScrollView>
+
+    <WebView
+        android:id="@+id/editor_webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+</LinearLayout>
+
+<!--
+<ImageButton
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:tag="bold"
+                    android:src="@drawable/ic_editor_bold_btn"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="@string/img_desc"
+                    />
+-->

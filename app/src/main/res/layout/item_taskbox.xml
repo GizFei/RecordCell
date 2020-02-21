@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:id="@+id/item_taskbox_cardView"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="84dp"
+    android:layout_margin="8dp"
+    android:foreground="?attr/selectableItemBackground"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="0dp"
+    android:backgroundTint="#F1F2F3"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/item_taskbox_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_item_taskbox_cv">
+
+        <LinearLayout
+            android:id="@+id/item_taskbox_content_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="8dp"
+            android:layout_gravity="center_vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/item_taskbox_icon"
+            app:layout_constraintHorizontal_bias="0">
+
+            <TextView
+                android:id="@+id/item_taskbox_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:singleLine="true"
+                android:ellipsize="middle"
+                tools:text="待办集名称"
+                />
+
+            <TextView
+                android:id="@+id/item_taskbox_intro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/dark_gray"
+                android:layout_gravity="center_vertical"
+                android:maxLines="1"
+                android:ellipsize="end"
+                tools:text="记 录"
+                />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/item_taskbox_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:scaleType="centerInside"
+            android:contentDescription="@string/img_desc"
+            android:src="@raw/undraw_slider"
+            android:layout_gravity="center_vertical|end"
+            android:adjustViewBounds="true"
+            tools:src="@raw/undraw_slider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/item_taskbox_new_btn"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:contentDescription="@string/img_desc"
+        android:src="@drawable/ic_add"
+        android:tint="#504F4F"
+        android:visibility="gone"
+        />
+
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Markdown编辑器</title>
+	<meta charset="UTF-8">
+	<script type="text/javascript">
+		var mdDoc;
+
+		function initDoc() { // 初始化文档
+			mdDoc = document.getElementById("textBox");
+			mdDoc.focus();
+			mdDoc.onblur = function() {
+				AndroidJs.onTextBoxBlur();
+			}
+			mdDoc.onkeyup = function() {// 统计字数
+				let count = mdDoc.innerText.replace(/\s+/g, "").length
+				AndroidJs.onTextCounter(count)
+            }
+		}
+
+		function formatDoc(command, value) { // 格式化文档内容
+			document.execCommand(command, false, value);
+			mdDoc.focus();
+			if(command == "undo" || command == "redo" || command == "createLink"){
+				let count = mdDoc.innerText.replace(/\s+/g, "").length
+				AndroidJs.onTextCounter(count)
+			}
+			return command
+		}
+
+		function getDocHtml() { // 获得文本区域的HTML格式，最外层用div包裹
+			return mdDoc.innerHTML
+		}
+
+		function setCaretEnd() { // 将光标移动文本末尾
+            let range = document.createRange();
+            let sel = window.getSelection();
+            let lastNode = mdDoc.lastChild;
+            while(!lastNode.length){
+            	if(lastNode.lastChild != null){
+            		lastNode = lastNode.lastChild;
+                	if(lastNode.nodeName == "BR"){
+                    	break;
+                	}
+            	}else{
+            		break;
+                }
+            }
+            range.setStart(lastNode, lastNode.length);
+            range.collapse(true);
+            sel.removeAllRanges();
+            sel.addRange(range);
+            mdDoc.focus();
+        }
+
+        function switchMode(isEdit) {
+        	if(isEdit){
+        		mdDoc.contentEditable=true;
+        		document.body.style.backgroundColor='#F6F6F6';
+        		mdDoc.focus();
+        		setCaretEnd();
+        	}else{
+        		mdDoc.contentEditable=false;
+        		document.body.style.backgroundColor='#FFF';
+        	}
+        }
+
+        function setContent(content){
+        	mdDoc.innerHTML=content;
+        }
+	</script>
+	<style type="text/css">
+		body{
+			height: 100%;
+			margin: 16px;
+			background-color: #F6F6F6;
+		}
+		#textBox{
+			width: 100%;
+            overflow-y: scroll;
+            caret-color: #4145EB; // 插入符号（|）的颜色
+		}
+		#textBox:empty:before{
+            content: attr(data-placeholder);
+            color: gray;
+        }
+        #textBox:focus {
+        	outline: none;
+        }
+	</style>
+    <link rel="stylesheet" href="theme.css">
+</head>
+<body onload="initDoc();">
+    <div id="textBox" contenteditable="true" data-placeholder="输入内容"></div>
+<!--	<div id="textBox" contenteditable="true" data-placeholder="输入内容">-->
+<!--        <b>加粗内容</b><div><i style="">斜体内容</i><br><div><u>下划线</u></div><div><strike>删除线</strike></div></div><div>居左</div><div style="text-align: center;">居中</div><div style="text-align: right;">居右</div><div style="text-align: left;"><ol><li>有序列表1</li><li>有序列表2</li><li>有序列表3</li></ol><ul><li>无序列表1</li><li>无序列表2</li><li>无序列表3</li></ul><blockquote>引用块</blockquote><blockquote>引用块2</blockquote>减少缩进</div><blockquote style="margin: 0 0 0 40px; border: none; padding: 0px;"><blockquote style="margin: 0 0 0 40px; border: none; padding: 0px;"><div style="text-align: left;">增加缩进</div></blockquote></blockquote><font color="#777777"><a href="http://www.baidu.com">http://www.baidu.com</a><br></font><blockquote>引用块</blockquote><blockquote>引用块2</blockquote><img src="http://dummyimage.com/160x90">-->
+<!--    <div>-->
+<!--        <button onclick="formatDoc('undo')">撤消</button>-->
+<!--        <button onclick="formatDoc('redo')">重做</button>-->
+<!--        <button onclick="formatDoc('bold')">加粗</button>-->
+<!--        <button onclick="formatDoc('italic')">斜体</button>-->
+<!--        <button onclick="formatDoc('underline')">下划线</button>-->
+<!--        <button onclick="formatDoc('strikeThrough')">删除线</button>-->
+<!--        <button onclick="formatDoc('insertHorizontalRule')">添加水平线</button>-->
+<!--        <button onclick="formatDoc('justifyLeft')">居左</button>-->
+<!--        <button onclick="formatDoc('justifyCenter')">居中</button>-->
+<!--        <button onclick="formatDoc('justifyRight')">居右</button>-->
+<!--        <button onclick="formatDoc('insertOrderedList')">有序列表</button>-->
+<!--        <button onclick="formatDoc('insertUnorderedList')">无序列表</button>-->
+<!--        <button onclick="formatDoc('formatBlock','blockquote')">引用</button>-->
+<!--        <button onclick="formatDoc('indent')">添加缩进</button>-->
+<!--        <button onclick="formatDoc('outdent')">减少缩进</button>-->
+<!--        <button onclick="formatDoc('selectAll')">全选</button>-->
+<!--        <button onclick="var sLnk=prompt('Write the URL here','http:\/\/');if(sLnk&&sLnk!=''&&sLnk!='http://'){formatDoc('createLink',sLnk)}">添加链接</button>-->
+<!--        <button onclick="var sLnk=prompt('图片链接','http:\/\/');if(sLnk&&sLnk!=''&&sLnk!='http://'){formatDoc('insertImage',sLnk)}">添加图片</button>-->
+<!--    </div>-->
+</body>
+</html>

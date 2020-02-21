@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/taskbox_detail_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|enterAlwaysCollapsed"
+            app:titleEnabled="false">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/taskbox_detail_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:minHeight="200dp"
+                    android:contentDescription="@string/img_desc"
+                    android:src="@raw/undraw_slider"
+                    android:scaleType="center"
+                    android:visibility="visible"
+                    android:background="@color/white"
+                    android:foreground="#7A000000"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:layout_gravity="bottom">
+
+                    <TextView
+                        android:id="@+id/taskbox_detail_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:textSize="20sp"
+                        android:textColor="@color/white"
+                        android:maxLength="50"
+                        android:drawableEnd="@drawable/ic_chevron_right"
+                        android:drawablePadding="4dp"
+                        tools:text="@string/app_name"
+                        />
+
+                    <TextView
+                        android:id="@+id/taskbox_detail_introduction"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:textColor="@color/white"
+                        android:maxLines="2"
+                        android:lineSpacingExtra="2dp"
+                        android:ellipsize="end"
+                        tools:text="@string/app_name"
+                        />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/taskbox_detail_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:paddingEnd="42dp"
+                android:paddingStart="0dp"
+                android:background="@color/transparent"
+                tools:title="@string/tool_short_text"
+                app:navigationIcon="@drawable/ic_arrow_back_black"
+                app:contentInsetStartWithNavigation="0dp"
+                app:contentInsetStart="0dp"
+                app:layout_collapseMode="pin"
+                >
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F1F2F3"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/taskbox_detail_todo_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginStart="4dp"
+                android:orientation="horizontal">
+
+                <com.giz.recordcell.widgets.ShadeTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="start|center_vertical"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
+                    android:text="@string/taskbox_detail_todo_hint"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+                    app:stv_shadeLength="10dp"
+                    app:stv_shadeColor="@color/secondaryLightColorAccent"
+                    app:fullRoundCorner="true"
+                    app:stv_solidColor="@color/secondaryColorAccent"
+                    app:stv_yOffset="2dp"
+                    />
+
+                <com.giz.recordcell.widgets.ShadeImageButton
+                    android:id="@+id/taskbox_detail_add_todo_btn"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_add_round"
+                    android:tint="@color/black"
+                    android:scaleType="centerInside"
+                    app:sib_type="circle"
+                    app:sib_solidColor="@color/white"
+                    app:sib_shadeColor="#E1E1E1"
+                    />
+                <com.giz.recordcell.widgets.ShadeImageButton
+                    android:id="@+id/taskbox_detail_remove_todo_btn"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_minus"
+                    android:tint="@color/red"
+                    android:scaleType="centerInside"
+                    app:sib_type="circle"
+                    app:sib_solidColor="@color/white"
+                    app:sib_shadeColor="#E1E1E1"
+                    />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/taskbox_detail_todo_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                />
+
+            <LinearLayout
+                android:id="@+id/taskbox_detail_note_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginStart="4dp"
+                android:orientation="horizontal">
+
+                <com.giz.recordcell.widgets.ShadeTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="start|center_vertical"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
+                    android:text="便签"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+                    app:stv_shadeLength="10dp"
+                    app:stv_shadeColor="@color/secondaryLightColorAccent"
+                    app:fullRoundCorner="true"
+                    app:stv_solidColor="@color/secondaryColorAccent"
+                    app:stv_yOffset="2dp"
+                    />
+
+                <com.giz.recordcell.widgets.ShadeImageButton
+                    android:id="@+id/taskbox_detail_add_note_btn"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_add_round"
+                    android:tint="@color/black"
+                    android:scaleType="centerInside"
+                    app:sib_type="circle"
+                    app:sib_solidColor="@color/white"
+                    app:sib_shadeColor="#E1E1E1"
+                    />
+                <com.giz.recordcell.widgets.ShadeImageButton
+                    android:id="@+id/taskbox_detail_remove_note_btn"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_minus"
+                    android:tint="@color/red"
+                    android:scaleType="centerInside"
+                    app:sib_type="circle"
+                    app:sib_solidColor="@color/white"
+                    app:sib_shadeColor="#E1E1E1"
+                    />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/taskbox_detail_note_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                app:spanCount="2"
+                app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+                />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal">
+
+        <com.giz.recordcell.widgets.ShadeImageButton
+            android:id="@+id/taskbox_detail_modify_btn"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:src="@drawable/ic_edit"
+            android:tint="@color/black"
+            android:scaleType="centerInside"
+            app:sib_type="circle"
+            app:sib_shadeColor="#E1E1E1"
+            />
+
+        <com.giz.recordcell.widgets.ShadeImageButton
+            android:id="@+id/taskbox_detail_delete_btn"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:src="@drawable/ic_delete"
+            android:scaleType="centerInside"
+            app:sib_type="circle"
+            app:sib_solidColor="@color/red"
+            app:sib_shadeColor="#6BFF0000"
+            />
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

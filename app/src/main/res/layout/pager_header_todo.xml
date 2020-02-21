@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:paddingTop="12dp"
+    android:gravity="end">
+
+    <ImageView
+        android:id="@+id/pager_header_todo_visibility"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:src="@drawable/ic_visibility_off"
+        android:tint="@color/black"
+        android:contentDescription="@string/img_desc"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        />
+
+</LinearLayout>

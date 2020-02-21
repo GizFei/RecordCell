@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/menu_todo_add_to_taskbox"
+        android:title="@string/menu_todo_add_to_taskbox"
+        android:icon="@drawable/ic_box"
+        />
+
+    <item android:id="@+id/menu_todo_delete"
+        android:title="@string/menu_item_delete"
+        android:icon="@drawable/ic_menu_delete"
+        />
+
+</menu>

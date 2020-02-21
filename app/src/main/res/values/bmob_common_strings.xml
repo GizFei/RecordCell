@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="bmob_common_action_info_exist" translatable="false">正在下载中.</string>
+	<string name="bmob_common_info_interrupt" translatable="false">下载出错啦，请检查网络后继续。</string>
+	<string name="bmob_common_action_pause" translatable="false">暂停</string>
+	<string name="bmob_common_action_continue" translatable="false">继续</string>
+	<string name="bmob_common_action_cancel" translatable="false">取消</string>
+	<string name="bmob_common_download_notification_prefix" translatable="false">正在下载: </string>
+	<string name="bmob_common_pause_notification_prefix" translatable="false">暂停: </string>
+	<string name="bmob_common_start_download_notification" translatable="false">正在下载应用</string>
+	<string name="bmob_common_start_patch_notification" translatable="false">正在更新安装包</string>
+    <string name="bmob_common_network_break_alert" translatable="false">请连接网络后再尝试！</string>
+	<string name="bmob_common_download_failed" translatable="false">下载失败</string>
+	<string name="bmob_common_download_finish" translatable="false">下载完成，请点击安装</string>
+	<string name="bmob_common_patch_finish" translatable="false">更新完成，请点击安装</string>
+	<string name="bmob_common_silent_download_finish" translatable="false">新版本已经准备好，请点击安装</string>
+</resources>

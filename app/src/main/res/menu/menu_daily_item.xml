@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/menu_daily_item_modify"
+        android:title="@string/menu_item_modify"
+        android:icon="@drawable/ic_menu_edit"
+        />
+
+    <item android:id="@+id/menu_daily_item_delete"
+        android:title="@string/menu_item_delete"
+        android:icon="@drawable/ic_menu_delete"
+        />
+
+</menu>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        app:title="方格"
+        app:iconSpaceReserved="false">
+
+        <Preference
+            app:key="record_home_function_list"
+            app:title="主页功能列表顺序"
+            app:iconSpaceReserved="false"
+            />
+
+        <SwitchPreferenceCompat
+            app:key="record_home_show_header"
+            app:title="主页显示头像和背景"
+            app:defaultValue="true"
+            app:iconSpaceReserved="false"
+            />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:title="待办"
+        app:iconSpaceReserved="false">
+
+        <SwitchPreferenceCompat
+            app:key="todo_show_remark"
+            app:title="显示备注"
+            app:iconSpaceReserved="false"
+            app:defaultValue="true"
+            />
+
+        <SwitchPreferenceCompat
+            app:key="todo_hide_finished"
+            app:title="默认隐藏已完成"
+            app:defaultValue="true"
+            app:iconSpaceReserved="false"
+            />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:title="其他"
+        app:iconSpaceReserved="false"
+        >
+
+        <Preference
+            app:title="使用技巧"
+            app:iconSpaceReserved="false"
+            />
+
+        <Preference
+            app:title="开发日志"
+            app:iconSpaceReserved="false"
+            />
+
+    </PreferenceCategory>
+
+
+</PreferenceScreen>
